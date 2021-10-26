@@ -36,15 +36,6 @@ connection.query('insert into users set ?', person, function(err, result){
     });
 });
 
-app.get("/joke", function(req, res){
-  var joke = "what do you call a dog that does magic tricks? a labracadabrador."
-  res.send(joke);
-});
-
-app.get("/random_num", function(req, res){
-  var num = Math.floor(Math.random() * 10) + 1;
-  res.send("Your Luncky number is " + num);
-});
 
 app.listen(8080, function(){
   console.log("server running on 8080!");
